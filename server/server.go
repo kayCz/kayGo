@@ -3,8 +3,8 @@ package server
 import (
 	"net"
 	log "github.com/kayCz/kaylog"
-	"../client"
-	"../protocol"
+	"github.com/kayCz/kayGo/client"
+	"github.com/kayCz/kayGo/protocol"
 )
 
 type Handler interface {
@@ -61,7 +61,7 @@ func (self *Server) serve(client *client.Client) {
 	if err != nil {
 		log.Error("Server | serve Error : " , err)
 	}
-	ans, _ := self.handler.serveHandler(v)
+	ans , _  := self.handler.serveHandler(v)
 	client.Send(ans)
 }
 

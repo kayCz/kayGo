@@ -1,9 +1,9 @@
 package main
 
 import (
-	"../server"
-	"../client"
-	"../protocol"
+	"github.com/kayCz/kayGo/server"
+	"github.com/kayCz/kayGo/client"
+	"github.com/kayCz/kayGo/protocol"
 	"fmt"
 )
 

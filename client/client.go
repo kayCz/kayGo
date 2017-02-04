@@ -2,7 +2,7 @@ package client
 
 import (
 	"net"
-	"../protocol"
+	"github.com/kayCz/kayGo/protocol"
 	log "github.com/kayCz/kaylog"
 )
 
