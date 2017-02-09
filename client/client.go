@@ -20,8 +20,6 @@ func Dail(network, address string, protocol protocol.Protocol) (*Client, error){
 		return nil, err
 	}
 	return NewClient(conn, protocol), nil
-
-
 }
 
 func NewClient(conn net.Conn, protocol protocol.Protocol) *Client {
@@ -40,4 +38,8 @@ func (self *Client) Send(v interface{}) error{
 
 func (self *Client) Receive() (v interface{}, err error){
 	return self.protocol.Receive()
+}
+
+func (self *Client) Close() error {
+	return self.conn.Close()
 }

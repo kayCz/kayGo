@@ -63,6 +63,7 @@ func (self *Server) serve(client *client.Client) {
 	}
 	ans , _  := self.handler.serveHandler(v)
 	client.Send(ans)
+	client.Close()
 }
 
 
